@@ -17,7 +17,7 @@ function App() {
             </button>
 
             <button onClick={() => {
-                axios.get("/api/getUser")
+                axios.get("/api/getUserList")
                     .then((result) => {
                         console.log(result);
                     })

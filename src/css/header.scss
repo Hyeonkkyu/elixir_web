@@ -1,11 +1,11 @@
 .Header {
     .banner {
-        background-color: #faab23;
+        background-color: #FAAB23;
         line-height: 40px;
         display: flex;
 
         strong {
-            font-size: 13px;
+            font-size: 16px;
             color: #ffffff;
             margin: 0 auto;
         }
@@ -25,8 +25,8 @@
         .gnb {
             ul {
                 display: flex;
-                font-size: 15px;
-                gap: 60px;
+                font-size: 14px;
+                gap: 70px;
 
                 li.on {
                     color: #c58b40;
