@@ -9,16 +9,17 @@ const Video = () => {
         <p>미스터리 장르가 여전히 유효한 이유</p>
         <div className="movie">
           <YouTube
-            className='youtube'
+            className="movieBox"
             videoId={"l9uMVggWRbg"}
             opts={{
+              height: '100%',
+              width: '100%',
               playerVars: {
-                width: "1000",
-                // height: "315",
+                width: "560",
                 autoplay: 1, //
                 rel: 0, //관련 동영상 표시하지 않음
                 modestbranding: 1, // 컨트롤 바에 youtube 로고를 표시하지 않음
-              }
+              },
             }}
             onEnd={(e) => { e.target.stopVideo(0); }} />
         </div>
