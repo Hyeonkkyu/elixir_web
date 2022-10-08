@@ -11,6 +11,7 @@ $subColor : #c58b40;
 
 .inner {
     width: 1170px;
+    min-width: 1170px;
     margin: 0 auto;
 }
 
@@ -100,31 +101,37 @@ $subColor : #c58b40;
         }
 
         .movie {
-            .movieBox::before {
-                position: absolute;
-                content: "";
-                display: block;
-                width: 700px;
-                height: 455px;
-                transform: translate(-10px, -10px);
-                border: 1px solid $subColor;
-            }
+            width: 700px;
+            height: 455px;
 
             .movieBox {
-                width: 700px;
-                height: 455px;
-            }
-
-            .movieBox::after {
                 position: absolute;
-                content: "";
-                display: block;
                 width: 700px;
                 height: 455px;
-                transform: translate(10px, -445px);
-                border: 1px solid $mainColor;
+                
+                z-index: 999;
             }
 
+        }
+
+        .movie::before {
+            position: absolute;
+            content: "";
+            display: block;
+            width: 700px;
+            height: 455px;
+            transform: translate(-10px, -10px);
+            border: 1px solid $subColor;
+        }
+
+        .movie::after {
+            position: absolute;
+            content: "";
+            display: block;
+            width: 700px;
+            height: 455px;
+            transform: translate(10px, 10px);
+            border: 1px solid $mainColor;
         }
     }
 }
