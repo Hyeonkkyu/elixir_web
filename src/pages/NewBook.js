@@ -4,8 +4,8 @@ const NewBook = () => {
 	return (
 		<section className='newBook sectionPadding'>
 			<div className='inner'>
-				<h2>NEW BOOK</h2>
-				<p>새로 발간된 책을 소개합니다.</p>
+				<h2 className='secTitle'>NEW BOOK</h2>
+				<p className='secDesc'>새로 발간된 책을 소개합니다.</p>
 				<div className='newBookSlider'>
 					<div className='product'>
 						<figure>

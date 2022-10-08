@@ -15,6 +15,20 @@ $subColor : #c58b40;
     margin: 0 auto;
 }
 
+.secTitle {
+    font-size: 30px;
+    font-weight: 600;
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.secDesc {
+    font-size: 15px;
+    color: #2f2f2f;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
 .mainVisual {
     .mainSlider {
         li {
@@ -42,20 +56,6 @@ $subColor : #c58b40;
 
 .newBook {
     >div {
-        >h2 {
-            font-size: 30px;
-            font-weight: 600;
-            text-align: center;
-            margin-bottom: 15px;
-        }
-
-        >p {
-            font-size: 15px;
-            color: #2f2f2f;
-            text-align: center;
-            margin-bottom: 40px;
-        }
-
         .newBookSlider {
             display: flex;
             gap: 50px;
@@ -63,7 +63,7 @@ $subColor : #c58b40;
             .product {
                 figure {
                     margin-bottom: 20px;
-                    box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.2);
+                    box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.3);
                 }
 
                 h3 {
@@ -86,29 +86,17 @@ $subColor : #c58b40;
     background-color: #f8f8f8;
 
     >div {
-        >h2 {
-            font-size: 30px;
-            font-weight: 600;
-            text-align: center;
-            margin-bottom: 15px;
-        }
-
-        >p {
-            font-size: 15px;
-            color: #2f2f2f;
-            text-align: center;
-            margin-bottom: 40px;
-        }
 
         .movie {
             width: 700px;
             height: 455px;
+            margin: 0 auto 60px auto;
+
 
             .movieBox {
                 position: absolute;
                 width: 700px;
                 height: 455px;
-                
                 z-index: 999;
             }
 
@@ -132,6 +120,47 @@ $subColor : #c58b40;
             height: 455px;
             transform: translate(10px, 10px);
             border: 1px solid $mainColor;
+        }
+
+        .contents {
+            >h3 {
+                font-size: 27px;
+                font-family: Nanum Myeongjo, serif;
+                text-align: center;
+                margin-bottom: 20px;
+            }
+
+            // >h3::before {
+            //     content: "";
+            //     position: absolute;
+            //     display: block;
+            //     height: 30px;
+            //     width: 80%;
+            //     background-color: rgba(250, 171, 35, 0.45);
+            // }
+
+            p {
+                font-size: 16px;
+                font-weight: 300;
+                text-align: center;
+            }
+        }
+    }
+}
+
+.About {
+    >div {
+        display: flex;
+        justify-content: space-between;
+
+        >div {
+            >figure {
+                margin-bottom: 20px;
+                box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.3);
+                image {
+                    width: 100%;
+                }
+            }
         }
     }
 }
