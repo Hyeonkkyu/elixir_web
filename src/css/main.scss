@@ -2,7 +2,7 @@ $mainColor : #FAAB23;
 $subColor : #c58b40;
 
 * {
-    outline: 1px solid tomato;
+    // outline: 1px solid tomato;
 }
 
 .sectionPadding {
@@ -106,7 +106,7 @@ $subColor : #c58b40;
 
         }
 
-        .movie::before {
+        &::before {
             position: absolute;
             content: "";
             display: block;
@@ -116,7 +116,7 @@ $subColor : #c58b40;
             border: 1px solid $subColor;
         }
 
-        .movie::after {
+        &::after {
             position: absolute;
             content: "";
             display: block;
@@ -177,6 +177,7 @@ $subColor : #c58b40;
 .Contact {
     display: flex;
     gap: 30px;
+    padding: 100px 0;
 
     .textBox {
         // display: flex;

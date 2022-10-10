@@ -7,6 +7,8 @@ import Books from './pages/Books';
 import Mysteria from './pages/Mysteria';
 import News from './pages/News';
 import Contact from './pages/Contact';
+import SignIn from './pages/SignIn';
+import SignUp from './pages/SignUp';
 import Footer from './components/Footer';
 import './css/main.scss';
 
@@ -21,6 +23,8 @@ const App = () => {
         <Route path='/mysteria' element={<Mysteria />} />
         <Route path='/news' element={<News />} />
         <Route path='/contact' element={<Contact />} />
+        <Route path='/login' element={<SignIn />} />
+        <Route path='/signup' element={<SignUp />} />
       </Routes>
       <Footer />
     </>

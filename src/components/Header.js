@@ -44,7 +44,9 @@ const Header = () => {
                     </ul>
                 </nav>
                 <div className="user">
-                    <a href="">로그인</a>
+                    <Link to="/login">
+                        로그인
+                    </Link>
                 </div>
             </div>
         </header>

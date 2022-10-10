@@ -1,0 +1,89 @@
+:root {
+    --pointColor:#FAAB23;
+}
+
+.SignIn {
+    padding: 100px 0;
+}
+
+.SignIn>h2 {
+    font-family: Nanum Myeongjo, serif;
+    font-size: 36px;
+    font-weight: 600;
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+form {
+    margin: 0 auto;
+    width: 30%;
+}
+
+.inputBox {
+    position: relative;
+    margin: 10px 0;
+}
+
+.inputBox>input {
+    background: transparent;
+    border: none;
+    border-bottom: solid 1px #ccc;
+    padding: 20px 0px 5px 0px;
+    font-size: 14px;
+    width: 100%;
+}
+
+input::placeholder {
+    color: transparent;
+}
+
+input:placeholder-shown+label {
+    color: #aaa;
+    font-size: 14px;
+    top: 15px;
+
+}
+
+input:focus+label,
+label {
+    color: var(--pointColor);
+    font-size: 10px;
+    pointer-events: none;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    transition: all 0.2s ease;
+    -webkit-transition: all 0.2s ease;
+    -moz-transition: all 0.2s ease;
+    -o-transition: all 0.2s ease;
+}
+
+input:focus,
+input:not(:placeholder-shown) {
+    border-bottom: solid 1px var(--pointColor);
+    outline: none;
+}
+
+input[type=submit] {
+    background-color: var(--pointColor);
+    border: none;
+    color: rgb(255, 255, 255);
+    border-radius: 5px;
+    width: 100%;
+    height: 35px;
+    font-size: 14px;
+    margin-top: 100px;
+}
+
+.userConfig {
+    display: flex;
+    gap: 10px;
+    justify-content: flex-end;
+}
+
+.userConfig>div {
+    text-align: right;
+    font-size: 12px;
+    color: rgb(164, 164, 164);
+    margin: 10px 0px;
+}
