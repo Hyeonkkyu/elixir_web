@@ -2,7 +2,7 @@ $mainColor : #FAAB23;
 $subColor : #c58b40;
 
 * {
-    // outline: 1px solid tomato;
+    outline: 1px solid tomato;
 }
 
 .sectionPadding {
@@ -27,6 +27,10 @@ $subColor : #c58b40;
     color: #2f2f2f;
     text-align: center;
     margin-bottom: 40px;
+}
+
+.subheading {
+    font-family: Nanum Myeongjo, serif;
 }
 
 .mainVisual {
@@ -149,18 +153,47 @@ $subColor : #c58b40;
 }
 
 .About {
+
     >div {
         display: flex;
-        justify-content: space-between;
+        gap: 50px;
 
-        >div {
-            >figure {
+        div {
+            figure {
                 margin-bottom: 20px;
                 box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.3);
-                image {
-                    width: 100%;
-                }
+
             }
         }
+    }
+}
+
+.Books {}
+
+.Myteria {}
+
+.News {}
+
+.Contact {
+    display: flex;
+    gap: 30px;
+
+    .textBox {
+        // display: flex;
+        flex: 1;
+        // flex-direction: column;
+        // justify-content: space-between;
+        padding: 30px 0;
+
+        h2 {
+            font-family: Nanum Myeongjo, serif;
+            font-size: 36px;
+            font-weight: 600;
+        }
+    }
+
+    .imgBox {
+        flex: 1;
+        display: inline-block;
     }
 }
