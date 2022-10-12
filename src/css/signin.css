@@ -1,5 +1,5 @@
 :root {
-    --pointColor:#FAAB23;
+    --pointColor: #FAAB23;
 }
 
 .SignIn {
@@ -14,17 +14,17 @@
     margin-bottom: 50px;
 }
 
-form {
+.SignIn>form {
     margin: 0 auto;
     width: 30%;
 }
 
-.inputBox {
+.SignIn>form>.inputBox {
     position: relative;
     margin: 10px 0;
 }
 
-.inputBox>input {
+.SignIn>form>.inputBox>input {
     background: transparent;
     border: none;
     border-bottom: solid 1px #ccc;
@@ -33,19 +33,19 @@ form {
     width: 100%;
 }
 
-input::placeholder {
+.SignIn>form>.inputBox>input::placeholder {
     color: transparent;
 }
 
-input:placeholder-shown+label {
+.SignIn>form>.inputBox>input:placeholder-shown+label {
     color: #aaa;
     font-size: 14px;
     top: 15px;
 
 }
 
-input:focus+label,
-label {
+.SignIn>form>.inputBox>input:focus+label,
+.SignIn>form>.inputBox>label {
     color: var(--pointColor);
     font-size: 10px;
     pointer-events: none;
@@ -58,13 +58,13 @@ label {
     -o-transition: all 0.2s ease;
 }
 
-input:focus,
-input:not(:placeholder-shown) {
+.SignIn>form>.inputBox>input:focus,
+.SignIn>form>.inputBox>input:not(:placeholder-shown) {
     border-bottom: solid 1px var(--pointColor);
     outline: none;
 }
 
-input[type=submit] {
+.SignIn>form>input[type=submit] {
     background-color: var(--pointColor);
     border: none;
     color: rgb(255, 255, 255);
@@ -75,13 +75,13 @@ input[type=submit] {
     margin-top: 100px;
 }
 
-.userConfig {
+.SignIn>form>.userConfig {
     display: flex;
     gap: 10px;
     justify-content: flex-end;
 }
 
-.userConfig>div {
+.SignIn>form>.userConfig>div {
     text-align: right;
     font-size: 12px;
     color: rgb(164, 164, 164);
