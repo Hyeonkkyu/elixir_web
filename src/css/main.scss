@@ -104,27 +104,29 @@ $subColor : #c58b40;
                 z-index: 999;
             }
 
+            &::before {
+                position: absolute;
+                content: "";
+                display: block;
+                width: 700px;
+                height: 455px;
+                transform: translate(-10px, -10px);
+                border: 1px solid $subColor;
+            }
+
+            &::after {
+                position: absolute;
+                content: "";
+                display: block;
+                width: 700px;
+                height: 455px;
+                transform: translate(10px, 10px);
+                border: 1px solid $mainColor;
+            }
+
         }
 
-        &::before {
-            position: absolute;
-            content: "";
-            display: block;
-            width: 700px;
-            height: 455px;
-            transform: translate(-10px, -10px);
-            border: 1px solid $subColor;
-        }
 
-        &::after {
-            position: absolute;
-            content: "";
-            display: block;
-            width: 700px;
-            height: 455px;
-            transform: translate(10px, 10px);
-            border: 1px solid $mainColor;
-        }
 
         .contents {
             >h3 {
