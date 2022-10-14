@@ -9,11 +9,11 @@ const SignIn = () => {
             <form action="" method='POST'>
                 <div className='inputBox'>
                     <input id="user_id" type="text" name="user_id" placeholder="아이디" />
-                    <label for="user_id">아이디</label>
+                    <label htmlFor="user_id">아이디</label>
                 </div>
                 <div className='inputBox'>
                     <input id="user_pw" type="text" name="user_pw" placeholder="비밀번호" />
-                    <label for="user_pw">비밀번호</label>
+                    <label htmlFor="user_pw">비밀번호</label>
                 </div>
                 <div className='userConfig'>
                     <div className="findId">아이디 찾기</div>
