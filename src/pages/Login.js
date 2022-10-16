@@ -1,10 +1,10 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import '../css/signin.css';
+import '../css/login.css';
 
-const SignIn = () => {
+const Login = () => {
     return (
-        <section className='SignIn inner'>
+        <section className='Login inner'>
             <h2>LOGIN</h2>
             <form action="" method='POST'>
                 <div className='inputBox'>
@@ -19,7 +19,7 @@ const SignIn = () => {
                     <div className="findId">아이디 찾기</div>
                     <div className="findPw">비밀번호 찾기</div>
                     <div className="signUp">
-                        <Link to="/signup">
+                        <Link to="/join">
                             회원가입
                         </Link>
                     </div>
@@ -30,4 +30,4 @@ const SignIn = () => {
     )
 }
 
-export default SignIn
+export default Login

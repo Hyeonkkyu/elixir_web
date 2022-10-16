@@ -2,11 +2,11 @@
     --pointColor: #FAAB23;
 }
 
-.SignIn {
+.Login {
     padding: 100px 0;
 }
 
-.SignIn>h2 {
+.Login>h2 {
     font-family: Nanum Myeongjo, serif;
     font-size: 36px;
     font-weight: 600;
@@ -14,17 +14,17 @@
     margin-bottom: 50px;
 }
 
-.SignIn>form {
+.Login>form {
     margin: 0 auto;
     width: 30%;
 }
 
-.SignIn>form>.inputBox {
+.Login>form>.inputBox {
     position: relative;
     margin: 10px 0;
 }
 
-.SignIn>form>.inputBox>input {
+.Login>form>.inputBox>input {
     background: transparent;
     border: none;
     border-bottom: solid 1px #ccc;
@@ -33,19 +33,19 @@
     width: 100%;
 }
 
-.SignIn>form>.inputBox>input::placeholder {
+.Login>form>.inputBox>input::placeholder {
     color: transparent;
 }
 
-.SignIn>form>.inputBox>input:placeholder-shown+label {
+.Login>form>.inputBox>input:placeholder-shown+label {
     color: #aaa;
     font-size: 14px;
     top: 15px;
 
 }
 
-.SignIn>form>.inputBox>input:focus+label,
-.SignIn>form>.inputBox>label {
+.Login>form>.inputBox>input:focus+label,
+.Login>form>.inputBox>label {
     color: var(--pointColor);
     font-size: 10px;
     pointer-events: none;
@@ -58,13 +58,13 @@
     -o-transition: all 0.2s ease;
 }
 
-.SignIn>form>.inputBox>input:focus,
-.SignIn>form>.inputBox>input:not(:placeholder-shown) {
+.Login>form>.inputBox>input:focus,
+.Login>form>.inputBox>input:not(:placeholder-shown) {
     border-bottom: solid 1px var(--pointColor);
     outline: none;
 }
 
-.SignIn>form>input[type=submit] {
+.Login>form>input[type=submit] {
     background-color: var(--pointColor);
     border: none;
     color: rgb(255, 255, 255);
@@ -75,13 +75,13 @@
     margin-top: 100px;
 }
 
-.SignIn>form>.userConfig {
+.Login>form>.userConfig {
     display: flex;
     gap: 10px;
     justify-content: flex-end;
 }
 
-.SignIn>form>.userConfig>div {
+.Login>form>.userConfig>div {
     text-align: right;
     font-size: 12px;
     color: rgb(164, 164, 164);
