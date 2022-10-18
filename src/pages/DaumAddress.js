@@ -1,34 +1,38 @@
-import React, { useEffect, useState } from 'react'
-import DaumPostcode from 'react-daum-postcode'
+import React from 'react';
+import { useDaumPostcodePopup } from 'react-daum-postcode';
+import { postcodeScriptUrl } from 'react-daum-postcode/lib/loadPostcode';
 
-const DaumAddress = (props) => {
-    const address = props.address;
-    const setAddress = props.setAddress;
+const DaumAddress = () => {
+    const open = useDaumPostcodePopup(postcodeScriptUrl);
 
-    const onCompletePost = (data) => {
-        console.log(data.address);
-        setAddress(data.address);
+    const handleComplete = (data) => {
+        let fullAddress = data.address;
+        let extraAddress = '';
+        let zonecode = data.zonecode;
+
+        if (data.addressType === 'R') {
+            if (data.bname !== '') {
+                extraAddress += data.bname;
+            }
+            if (data.buildingName !== '') {
+                extraAddress += extraAddress !== '' ? `, ${data.buildingName}` : data.buildingName;
+            }
+            fullAddress += extraAddress !== '' ? ` (${extraAddress})` : '';
+        }
+
+        document.getElementById("daum_add").value = fullAddress; // e.g. '서울 성동구 왕십리로2길 20 (성수동1가)'
+        document.getElementById("daum_postCode").value = zonecode;
     };
 
-    const postCodeStyle = {
-        display: "block",
-        position: "absolute",
-        top: "20%",
-        width: "400px",
-        height: "400px",
-        padding: "7px",
-        zIndex: 100,
+    const handleClick = () => {
+        open({ onComplete: handleComplete });
     };
 
     return (
-        <div>
-            <DaumPostcode
-                style={postCodeStyle}
-                autoClose
-                onComplete={onCompletePost}
-            />
-        </div>
-    )
-}
+        <button type='button' onClick={handleClick} >
+            주소 검색
+        </button>
+    );
+};
 
-export default DaumAddress
+export default DaumAddress;

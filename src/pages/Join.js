@@ -3,17 +3,15 @@ import DatePicker from "react-datepicker";
 import { useForm } from 'react-hook-form';
 import axios from 'axios';
 import "react-datepicker/dist/react-datepicker.css";
-import { redirect } from 'react-router-dom';
 import DaumAddress from './DaumAddress';
 // import '../css/join.css';
 
 function App() {
 
-
-
   const { register, watch, formState: { errors }, handleSubmit } = useForm();
   {/*react-hook-form@7 사용시 (import{errors})를 {formState: {erros}}로 변경하여 사용해야한다. */ }
   const [startDate, setStartDate] = useState(new Date());
+
   const password = useRef();
   password.current = watch("password");
 
@@ -154,28 +152,49 @@ function App() {
           <DatePicker
             dateFormat="yyyy년 MM월 dd일"
             selected={startDate}
-            required={true}
             onChange={date => setStartDate(date)}
+            id="birth_date"
+            readOnly={true}
           />
         </div>
 
         {/* 카카오 주소 받기 완성해두기 */}
         <div className='inputBox'>
+
+          <label>우편번호</label>
+          <input
+            name="postcode"
+            id='daum_postCode'
+            type='text'
+            readOnly={true}
+            {...register("postcode", {
+              required: true,
+            })}
+          />
+          <DaumAddress />
           <label>주소</label>
           {errors.address && errors.address.type === "required"
             && <p className='message'>필수입력란입니다.</p>}
-          {errors.address && errors.address.type === "maxLength"
-            && <p className='message'>최대 입력수를 초과하였습니다.</p>}
           <input
             name="address"
+            id='daum_add'
             type='text'
+            readOnly={true}
             {...register("address", {
               required: true,
-              maxLength: 11
             })}
           />
-          <button onClick={()=>{setPopup(!popup)}}>주소 검색</button>
-          {popup && <DaumAddress className="postPopUp" address={address} setAddress={setAddress}/>}
+          {errors.address_detail && errors.address_detail.type === "maxLength"
+            && <p className='message'>최대 입력수를 초과하였습니다.</p>}
+          <input
+            name="address_detail"
+            type='text'
+            {...register("address_detail", {
+              required: true,
+              maxLength: 50
+            })}
+            placeholder="상세주소"
+          />
         </div>
 
         <input type="submit" value="회원가입" />
