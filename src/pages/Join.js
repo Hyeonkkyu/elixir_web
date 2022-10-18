@@ -3,8 +3,8 @@ import DatePicker from "react-datepicker";
 import { useForm } from 'react-hook-form';
 import axios from 'axios';
 import "react-datepicker/dist/react-datepicker.css";
-import Login from './Login';
 import { redirect } from 'react-router-dom';
+import DaumAddress from './DaumAddress';
 // import '../css/join.css';
 
 function App() {
@@ -16,6 +16,9 @@ function App() {
   const [startDate, setStartDate] = useState(new Date());
   const password = useRef();
   password.current = watch("password");
+
+  const [popup, setPopup] = useState(false);
+  const [address, setAddress] = useState("");
 
   const onSubmit = (data) => {
     // console.log('data', data)
@@ -171,6 +174,8 @@ function App() {
               maxLength: 11
             })}
           />
+          <button onClick={()=>{setPopup(!popup)}}>주소 검색</button>
+          {popup && <DaumAddress className="postPopUp" address={address} setAddress={setAddress}/>}
         </div>
 
         <input type="submit" value="회원가입" />
