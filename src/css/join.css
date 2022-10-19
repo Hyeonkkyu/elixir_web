@@ -2,12 +2,13 @@
     --pointColor: #FAAB23;
 }
 
-* {
-    /* outline: 1px solid tomato; */
-}
+/* * {
+    outline: 1px solid tomato;
+} */
 
+/* 
 
-form {
+.Join>form {
     max-width: 500px;
     margin: 0 auto;
 }
@@ -21,7 +22,7 @@ form {
     margin-bottom: 50px;
 }
 
-.message {
+.Join>.inputBox>.message {
     display: inline-block;
     color: #bf1650;
 }
@@ -96,7 +97,7 @@ button[type="button"] {
     display: block;
     appearance: none;
     background: #333;
-    /* color: white; */
+    color: white;
     border: none;
     text-transform: uppercase;
     padding: 10px 20px;
@@ -112,4 +113,4 @@ button {
     text-transform: uppercase;
     padding: 10px 20px;
     border-radius: 4px;
-}
+} */
