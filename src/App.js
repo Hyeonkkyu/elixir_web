@@ -9,6 +9,9 @@ import News from './pages/News';
 import Contact from './pages/Contact';
 import Login from './pages/Login';
 import Join from './pages/Join';
+import FindId from './pages/FindId';
+import FindPw from './pages/FindPw';
+import Test from './pages/Test';
 import Footer from './components/Footer';
 import './css/main.scss';
 
@@ -25,6 +28,9 @@ const App = () => {
         <Route path='/contact' element={<Contact />} />
         <Route path='/login' element={<Login />} />
         <Route path='/join' element={<Join />} />
+        <Route path='/findid' element={<FindId />} />
+        <Route path='/findpw' element={<FindPw />} />
+        <Route path='/test' element={<Test />} />
       </Routes>
       <Footer />
     </>

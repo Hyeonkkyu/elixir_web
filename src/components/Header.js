@@ -1,8 +1,44 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import jwt from 'jwt-decode';
+// import UserInfo from './UserInfo';
 import '../css/header.scss';
 
 const Header = () => {
+
+    function UserInfo() {
+        const isLogin = sessionStorage.getItem("token");
+        const logOut = () => {
+            sessionStorage.removeItem("token");
+            window.location.href = "/";
+        };
+        if (isLogin == null) {
+            return (
+                <Link to="/login">
+                    로그인
+                </Link>
+            )
+        } else if (jwt(isLogin)['user_role'] == "ROLE_USER") {
+            console.log(jwt(isLogin));
+            return (
+                <div>
+                    {/* <div>{jwt(isLogin)['sub']}님 반갑습니다!</div> */}
+                    <div>{jwt(isLogin)['nickname']} 님 반갑습니다!</div>
+                    <button onClick={logOut}>로그아웃</button>
+                </div>
+            )
+        } else if (jwt(isLogin)['user_role'] == "ROLE_ADMIN") {
+            return (
+                <div>
+                    <div>관리자님 반갑습니다!</div>
+                    <button onClick={logOut}>로그아웃</button>
+                </div>
+            )
+        } else {
+            console.log(jwt(isLogin)['user_role']);
+        }
+    };
+
     return (
         <header className="Header">
             <div className="banner">
@@ -44,9 +80,7 @@ const Header = () => {
                     </ul>
                 </nav>
                 <div className="user">
-                    <Link to="/login">
-                        로그인
-                    </Link>
+                    <UserInfo />
                 </div>
             </div>
         </header>

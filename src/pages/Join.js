@@ -1,5 +1,4 @@
 import React, { useRef, useState } from 'react';
-// import DatePicker from "react-datepicker";
 import { useForm } from 'react-hook-form';
 import axios from 'axios';
 import "react-datepicker/dist/react-datepicker.css";
@@ -7,7 +6,7 @@ import DaumAddress from './DaumAddress';
 import '../css/join.scss';
 import DateSelecter from './DateSelecter';
 
-function App() {
+const Join = () => {
 
   const { register, watch, formState: { errors }, handleSubmit } = useForm();
   {/*react-hook-form@7 사용시 (import{errors})를 {formState: {erros}}로 변경하여 사용해야한다. */ }
@@ -16,23 +15,25 @@ function App() {
   password.current = watch("user_pw");
 
   const onSubmit = (data) => {
-    console.log('data', data)
+    // console.log('data', data)
     axios({
       method: 'post',
       url: '/api/user/signup',
       data: data
     })
-      .then(function (response) {
-        alert('회원가입 완료');
+      .then((response) => {
+        alert('회원가입이 완료되었습니다.');
+        window.location.href = "/login";
       })
-      .catch(function (error) {
-        alert('회원가입 실패');
+      .catch((error) => {
+        alert('회원가입에 실패하셨습니다. 다시 시도해주세요.');
       })
   }
 
   return (
     <section className='Join inner'>
       <h2>JOIN</h2>
+      {/* <h2>회원가입</h2> */}
       <form onSubmit={handleSubmit(onSubmit)} >
         <div className='inputBox'>
           <label>이메일</label>
@@ -198,12 +199,10 @@ function App() {
             placeholder="상세주소"
           />
         </div>
-
         <input type="submit" value="회원가입" />
-
       </form>
     </section>
   );
 }
 
-export default App;
+export default Join;
