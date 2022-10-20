@@ -12,7 +12,7 @@ const Login = () => {
                     <label htmlFor="user_id">아이디</label>
                 </div>
                 <div className='inputBox'>
-                    <input id="user_pw" type="text" name="user_pw" placeholder="비밀번호" />
+                    <input id="user_pw" type="password" name="user_pw" placeholder="비밀번호" />
                     <label htmlFor="user_pw">비밀번호</label>
                 </div>
                 <div className='userConfig'>
