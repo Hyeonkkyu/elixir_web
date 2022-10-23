@@ -25,7 +25,7 @@ const Login = () => {
                 axios.defaults.headers.common[
                     "Authorization"
                 ] = `Bearer ${response.data.token}`;
-                window.location.href = "/";
+                window.location.replace('/');
             })
             .catch((error) => {
                 console.log(error);

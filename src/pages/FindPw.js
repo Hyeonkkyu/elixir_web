@@ -1,21 +1,12 @@
 import React from 'react'
 import axios from 'axios';
+// import { Link } from 'react-router-dom';
 import { useForm } from 'react-hook-form';
+import '../css/findpw.scss';
 
 const FindPw = () => {
 
   const { register, formState: { errors }, handleSubmit } = useForm();
-
-  // function ChangePw() {
-  //   if () { 
-  //     return (
-  //       <div>
-
-  //       </div>
-  //     )
-  //   }
-  //   else { "본인인증번호가 맞지 않습니다." }
-  // }
 
   const onSubmit = async (data) => {
     axios({
@@ -28,8 +19,14 @@ const FindPw = () => {
       .then((response) => {
         //js에서는 null 체크가 값을 통째로 넣어서 있으면 true, 없으면 false로 반환해준다.
         if (response.data) {
+          console.log(response.data);
+          sessionStorage.setItem("shortToken", response.data.token);
+          axios.defaults.headers.common[
+              "Authorization"
+          ] = `Bearer ${response.data.token}`;
+
           alert(`본인인증번호가 이메일로 전송되었습니다.`);
-          // window.location.href = "/login";
+          window.location.replace('/findpw/check')
         } else {
           alert('내용과 일치하는 회원정보가 없습니다.');
         }
@@ -40,8 +37,8 @@ const FindPw = () => {
   }
 
   return (
-    <section className='FindId'>
-      <h2>아이디 찾기</h2>
+    <section className='FPmain'>
+      <h2>비밀번호 찾기</h2>
       <form onSubmit={handleSubmit(onSubmit)}>
         <div className='inputBox'>
           <label>이메일</label>
@@ -92,9 +89,8 @@ const FindPw = () => {
             placeholder="휴대전화번호"
           />
         </div>
-        <input type="submit" value="아이디 찾기" />
+        <input type="submit" value="비밀번호 찾기" />
       </form>
-      {/* < ChangePw /> */}
     </section>
   )
 }

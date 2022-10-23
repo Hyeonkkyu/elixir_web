@@ -15,7 +15,7 @@ const Join = () => {
   password.current = watch("user_pw");
 
   const onSubmit = (data) => {
-    // console.log('data', data)
+    console.log('data', data)
     axios({
       method: 'post',
       url: '/api/user/signup',
@@ -141,8 +141,8 @@ const Join = () => {
 
         <div className='inputBox'>
           <label>생일</label>
-          {/* {errors.user_birth && errors.user_birth.type === "required"
-            && <p className='message'>필수입력란입니다.</p>} */}
+          {errors.user_birth && errors.user_birth.type === "required"
+            && <p className='message'>필수입력란입니다.</p>}
           <div className='birthDateBox'>
             <input
               name="user_birth"
@@ -175,8 +175,8 @@ const Join = () => {
             <DaumAddress className="addBtn" />
           </div>
 
-          {/* {errors.user_add && errors.user_add.type === "required"
-            && <p className='message'>필수입력란입니다.</p>} */}
+          {errors.user_add && errors.user_add.type === "required"
+            && <p className='message'>필수입력란입니다.</p>}
           <input
             name="user_add"
             id='daumAdd'

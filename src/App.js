@@ -11,6 +11,8 @@ import Login from './pages/Login';
 import Join from './pages/Join';
 import FindId from './pages/FindId';
 import FindPw from './pages/FindPw';
+import FindPwCheck from './pages/FindPwCheck';
+import FindPwChange from './pages/FindPwChange';
 import Test from './pages/Test';
 import Footer from './components/Footer';
 import './css/main.scss';
@@ -30,6 +32,8 @@ const App = () => {
         <Route path='/join' element={<Join />} />
         <Route path='/findid' element={<FindId />} />
         <Route path='/findpw' element={<FindPw />} />
+        <Route path='/findpw/check' element={<FindPwCheck />} />
+        <Route path='/findpw/changepw' element={<FindPwChange />} />
         <Route path='/test' element={<Test />} />
       </Routes>
       <Footer />

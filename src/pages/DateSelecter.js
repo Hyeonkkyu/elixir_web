@@ -1,26 +1,13 @@
 import React, { useState, useRef } from 'react'
-import DatePicker from "react-datepicker";
+import DatePicker, { registerLocale } from "react-datepicker";
 import moment from 'moment';
-import '../css/dateselecter.css'
+// import '../css/dateselecter.css'
+// registerLocale("ko", ko);
+import "react-datepicker/dist/react-datepicker.css";
 
 const DateSelecter = () => {
-    // const [startDate, setStartDate] = useState(new Date());
-    // const ExampleCustomInput = ({ value, onClick }) => (
-    //     <div className="example-custom-input" onClick={onClick}>
-    //         {value}
-    //         {/* 날짜 선택 */}
-    //     </div>
-    // );
 
-    // return (
-    //     <DatePicker
-    //         selected={startDate}
-    //         onChange={date => setStartDate(date)}
-    //         customInput={<ExampleCustomInput />}
-    //     />
-    // );
-
-    const [startDate, setStartDate] = useState(new Date());
+    const [startDate, setStartDate] = useState(null);
     const [isOpen, setIsOpen] = useState(false);
 
     const formatDate = moment(startDate).format('YYYY-MM-DD');
@@ -28,14 +15,15 @@ const DateSelecter = () => {
     const handleChange = (e) => {
         setIsOpen(!isOpen);
         setStartDate(e);
+
+        document.getElementById("birthDate").value = formatDate;
     };
     const handleClick = (e) => {
         e.preventDefault();
         setIsOpen(!isOpen);
 
-        document.getElementById("birthDate").value = formatDate;
-    };
 
+    };
 
 
     return (
@@ -46,16 +34,17 @@ const DateSelecter = () => {
             </button>
             {isOpen && (
                 <DatePicker
-                    dateFormat="yyyy년 MM월 dd일"
+                    locale="ko"
                     selected={startDate}
+                    // onChange={(date) => setStartDate(date)}
                     onChange={handleChange}
-                    // peekNextMonth
                     showMonthDropdown
                     showYearDropdown
                     dropdownMode="select"
+                    maxDate={new Date()}
+                    showDisabledMonthNavigation
                     inline />
                 // console.log(DatePicker),
-
             )}
         </>
     );
