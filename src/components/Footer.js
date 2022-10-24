@@ -33,7 +33,7 @@ const Footer = () => {
             <div className="container inner">
                 <h1 className='logo'>
                     <Link to='/'>
-                        <img src={`${process.env.PUBLIC_URL}/assets/img/logo.png`} alt='' />
+                        ELIXIR
                     </Link>
                 </h1>
                 <div className="copyRight">

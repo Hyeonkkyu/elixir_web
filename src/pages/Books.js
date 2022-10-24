@@ -1,13 +1,19 @@
 import React from 'react'
+import BookList from './BookList'
 
 const Books = () => {
+
+  
+
   return (
     <section className='Books inner'>
       <h2>New Release</h2>
-      <div className='newBook'>
+      <div className='newRelease'>
         <div className='left'>
-          <figure></figure>
-          <button>구매하기</button>
+          <figure>
+            <img src={`${process.env.PUBLIC_URL}/assets/img/image_1664413579745_1000.jpg`} />
+          </figure>
+          <button className='buyBtn'>구매하기</button>
         </div>
         <div className='right'>
           <h3>인사이트 밀</h3>
@@ -17,9 +23,26 @@ const Books = () => {
             시급 11만 2천엔. 보통 아르바이트 비용의 100배도 넘는 금액이다. 열두 명의 참가자는 각자의 이유로 이 수상하면서도 혹할 수밖에 없는 아르바이트에 지원한다. 어떤 사람은 장난삼아, 어떤 사람은 진짜인지 확인하기 위해, 어떤 사람은 단순히 돈이 필요해서, 어떤 사람은 자신의 재능을 시험하기 위해, 어떤 사람은 차를 갖고 싶어서. 의심과 궁금증을 품은 사람은 있었지만 어떤 일이 벌어질지는 아무도 예측하지 못했다. 그렇게 ‘암귀관’에 들어선 그들은 7일간의 데스 매치를 벌이게 된다.
           </p>
         </div>
-        <div className='bookList'>
-
+      </div>
+      <div className='bookList'>
+        <div className='listNav'>
+          <select name="selectbox">
+            <option value="전체" selected="selected">전체</option>
+            <option value="국내서">국내서</option>
+            <option value="해외서">해외서</option>
+            <option value="SF">SF</option>
+            <option value="공포">공포</option>
+            <option value="로맨스">로맨스</option>
+            <option value="미스터리">미스터리</option>
+            <option value="스릴러">스릴러</option>
+            <option value="액션">액션</option>
+            <option value="어드벤처">어드벤처</option>
+            <option value="추리">추리</option>
+            <option value="코미디">코미디</option>
+            <option value="판타지">판타지</option>
+          </select>
         </div>
+        <BookList/>
       </div>
     </section>
   )

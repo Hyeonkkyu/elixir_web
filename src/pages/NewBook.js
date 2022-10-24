@@ -1,4 +1,5 @@
 import React from 'react'
+import SearchFrom from './SearchForm';
 
 const NewBook = () => {
 	return (
@@ -9,32 +10,27 @@ const NewBook = () => {
 				<div className='newBookSlider'>
 					<div className='product'>
 						<figure>
-							<img src={`${process.env.PUBLIC_URL}/assets/img/image_1660884136399_300.jpeg`} alt="" />
+							<img src={`${process.env.PUBLIC_URL}/assets/img/image_1664413579745_1000.jpg`} alt="" />
 						</figure>
-						{/* <h3>잠 못 드는 밤의 궁궐 기담</h3>
-				<p>현찬양</p> */}
 					</div>
 					<div className='product'>
 						<figure>
-							<img src={`${process.env.PUBLIC_URL}/assets/img/image_1660884136399_300.jpeg`} alt="" />
+							<img src={`${process.env.PUBLIC_URL}/assets/img/image_1664413579745_1000.jpg`} alt="" />
 						</figure>
-						{/* <h3>잠 못 드는 밤의 궁궐 기담</h3>
-				<p>현찬양</p> */}
 					</div>
 					<div className='product'>
 						<figure>
-							<img src={`${process.env.PUBLIC_URL}/assets/img/image_1660884136399_300.jpeg`} alt="" />
+							<img src={`${process.env.PUBLIC_URL}/assets/img/image_1664413579745_1000.jpg`} alt="" />
 						</figure>
-						{/* <h3>잠 못 드는 밤의 궁궐 기담</h3>
-				<p>현찬양</p> */}
 					</div>
 					<div className='product'>
 						<figure>
-							<img src={`${process.env.PUBLIC_URL}/assets/img/image_1660884136399_300.jpeg`} alt="" />
+							<img src={`${process.env.PUBLIC_URL}/assets/img/image_1664413579745_1000.jpg`} alt="" />
 						</figure>
-						{/* <h3>잠 못 드는 밤의 궁궐 기담</h3>
-				<p>현찬양</p> */}
 					</div>
+				</div>
+				<div className='search'>
+					<SearchFrom/>
 				</div>
 			</div>
 		</section>

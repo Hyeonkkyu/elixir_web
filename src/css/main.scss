@@ -65,9 +65,11 @@ $subColor : #c58b40;
 
 .newBook {
     >div {
+        
         .newBookSlider {
             display: flex;
             gap: 50px;
+            margin-bottom: 50px;
 
             .product {
                 figure {
@@ -86,6 +88,19 @@ $subColor : #c58b40;
                     font-size: 15px;
                     text-align: center;
                 }
+            }
+        }
+
+        .search{
+            input{
+                border: none;
+                border-bottom: 1px solid $mainColor;
+                width: 35%;
+                color: #d3d3d3;
+            }
+            button{
+                background-color: none;
+                border: none;
             }
         }
     }
@@ -165,7 +180,62 @@ $subColor : #c58b40;
 }
 
 .Books {
-    
+    padding: 50px 0;
+
+    h2 {
+        font-size: 33px;
+        font-family: Nanum Myeongjo, serif;
+        text-align: center;
+        margin-bottom: 50px;
+    }
+
+    .newRelease {
+
+        display: flex;
+        gap: 50px;
+        padding-bottom: 30px;
+        margin-bottom: 50px;
+        border-bottom: 1px solid #d3d3d3;
+
+        .left {
+            flex: 1;
+
+            >figure {
+                padding: 30px;
+
+                >img {
+                    box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.3);
+                }
+            }
+
+            .buyBtn {
+                border: none;
+                color: #fff;
+                background-color: #333;
+                padding: 10px 30px;
+                border-radius: 10px;
+                font-size: 20px;
+            }
+        }
+
+        .right {
+            flex: 2;
+        }
+
+
+    }
+
+
+    .bookList {
+
+        .listNav {
+            display: flex;
+            justify-content: right;
+        }
+        .listBox{
+            padding: 20px 0;
+        }
+    }
 }
 
 .Myteria {}

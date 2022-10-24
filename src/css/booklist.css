@@ -1,0 +1,38 @@
+*{
+    /* outline: 1px solid tomato; */
+}
+
+.pagination {
+    display: flex;
+    justify-content: center;
+    margin: 15px auto;
+  }
+  
+  ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  ul.pagination li {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1rem;
+  }
+  
+  ul.pagination li a {
+    text-decoration: none;
+    font-size: 1rem;
+  }
+  
+  ul.pagination li.active a {
+    color: white;
+  }
+
+  ul.pagination li.active {
+    border-radius: 50%;
+    background-color: #FAAB23;
+  }
