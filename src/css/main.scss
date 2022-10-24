@@ -1,5 +1,6 @@
 $mainColor : #FAAB23;
 $subColor : #c58b40;
+$wgColor : #e7e7e7;
 
 * {
     // outline: 1px solid tomato;
@@ -65,7 +66,7 @@ $subColor : #c58b40;
 
 .newBook {
     >div {
-        
+
         .newBookSlider {
             display: flex;
             gap: 50px;
@@ -91,14 +92,15 @@ $subColor : #c58b40;
             }
         }
 
-        .search{
-            input{
+        .search {
+            input {
                 border: none;
                 border-bottom: 1px solid $mainColor;
                 width: 35%;
-                color: #d3d3d3;
+                color: $wgColor;
             }
-            button{
+
+            button {
                 background-color: none;
                 border: none;
             }
@@ -195,7 +197,7 @@ $subColor : #c58b40;
         gap: 50px;
         padding-bottom: 30px;
         margin-bottom: 50px;
-        border-bottom: 1px solid #d3d3d3;
+        border-bottom: 1px solid $wgColor;
 
         .left {
             flex: 1;
@@ -232,7 +234,8 @@ $subColor : #c58b40;
             display: flex;
             justify-content: right;
         }
-        .listBox{
+
+        .listBox {
             padding: 20px 0;
         }
     }
