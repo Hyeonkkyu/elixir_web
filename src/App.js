@@ -18,6 +18,7 @@ import BoardContent from './pages/BoardContent';
 import Test from './pages/Test';
 import Footer from './components/Footer';
 import './css/main.scss';
+import BookContent from './pages/BookContent';
 
 
 const App = () => {
@@ -28,7 +29,7 @@ const App = () => {
         <Route path='/' element={<Home />} />
         <Route path='/about' element={<About />} />
         <Route path='/books' element={<Books />} />
-        <Route path='/books/bookInfo' element={<Books />} />
+        <Route path='/books/bookInfo' element={<BookContent />} />
         <Route path='/mysteria' element={<Mysteria />} />
         <Route path='/news' element={<News />} />
         <Route path='/news/write' element={<BoardWrite />} />
