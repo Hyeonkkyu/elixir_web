@@ -27,9 +27,6 @@ const News = () => {
 
   const handlePageChange = (page) => { setPage(page); };
 
-  // console.log(items * (page - 1), items * (page - 1) + items)
-
-
   function AdminWriteBtn() {
     const checkUserRoll = sessionStorage.getItem("token");
     if (checkUserRoll == null) {

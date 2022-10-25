@@ -3,13 +3,13 @@ import moment from 'moment';
 import axios from 'axios'
 import { useSearchParams } from 'react-router-dom';
 
-const BoardContent = () => {
+const BookContent = () => {
 
     const [data, setData] = useState({});
 
     const [searchParams] = useSearchParams();
 
-    const query = searchParams.get('noticeNum');
+    const query = searchParams.get('bookInfoNum');
 
     useEffect(() => {
         axios({
@@ -17,7 +17,7 @@ const BoardContent = () => {
                 'Content-Type': 'application/json'
             },
             method: 'get',
-            url: '/api/admin/selectNotice',
+            url: '/api/product/selectBook',
             params: {
                 notice_num: query
             }
@@ -34,12 +34,16 @@ const BoardContent = () => {
     }, [])
 
     return (
-        <section className='BoardContent inner'>
-            <h2 className='tit'>{data.notice_title}</h2>
-            <div className='writeData'>{data.user_name} / {moment(data.notice_date).format('YYYY-MM-DD')}</div>
-            <div className='des'>{data.notice_content}</div>
+        <section className='BookContent'>
+            <figure>
+                <img src={`${process.env.PUBLIC_URL}/assets/img/${data.book_img}`} />
+            </figure>
+            <h3>{data.book_title}</h3>
+            <p>{data.book_writer}</p>
+            <a url={data.book_url}>구매하기</a>
+            <div className='des'>{data.book_info}</div>
         </section>
     )
 }
 
-export default BoardContent
+export default BookContent

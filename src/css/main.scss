@@ -307,6 +307,28 @@ $dgColor : #c9c9c9;
     }
 }
 
+
+.BoardContent{
+
+    padding: 100px 100px;
+
+    >.tit{
+        font-size: 27px;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+    >.writeData{
+        display: flex;
+        justify-content: right;
+        margin-bottom: 40px;
+    }
+    >.des{
+        font-size: 16px;
+        line-height: 25px;
+        white-space: pre-wrap;
+    }
+}
+
 .Contact {
     display: flex;
     gap: 30px;

@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import axios from 'axios'
+import { Link } from 'react-router-dom';
 import Pagination from "react-js-pagination";
 import '../css/booklist.css';
 
@@ -29,18 +30,20 @@ const BookList = () => {
     console.log(items * (page - 1), items * (page - 1) + items)
 
     return (
-        <div>
+        <div className='bookList'>
             {data.slice(
                 items * (page - 1),
                 items * (page - 1) + items
             ).map((it, i) => {
                 return (
                     <div key={i}>
-                        {/* <Link to={'/bookItem/' + it.id}> */}
-                        <div>{it.book_code}</div>
+                        <Link to={'/books/bookInfo?bookInfoNum=' + it.book_code}>
+                        <figure>
+                            <img src={`${process.env.PUBLIC_URL}/assets/img/${it.book_img}`} />
+                        </figure>
                         <h3>{it.book_title}</h3>
                         <p>{it.book_writer}</p>
-                        {/* </Link> */}
+                        </Link>
                     </div>
                 )
             })
