@@ -28,7 +28,7 @@ const Header = () => {
         } else if (jwt(isLogin)['user_role'] == "ROLE_ADMIN") {
             return (
                 <>
-                    <p>관리자님 반갑습니다!</p>
+                    <p><span>관리자님</span> 반갑습니다!</p>
                     <button onClick={logOut}>로그아웃</button>
                 </>
             )

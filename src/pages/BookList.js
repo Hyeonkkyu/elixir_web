@@ -24,7 +24,7 @@ const BookList = () => {
             });
     }, [])
 
-    const handlePageChange = (page) => { setPage(page); console.log('handlePageChange 호출 중') };
+    const handlePageChange = (page) => { setPage(page); };
 
     console.log(items * (page - 1), items * (page - 1) + items)
 
