@@ -37,7 +37,7 @@ const FindPw = () => {
   }
 
   return (
-    <section className='FPmain'>
+    <section className='FindPw inner'>
       <h2>비밀번호 찾기</h2>
       <form onSubmit={handleSubmit(onSubmit)}>
         <div className='inputBox'>
@@ -54,7 +54,7 @@ const FindPw = () => {
               required: true,
               pattern: /^\S+@\S+$/i
             })}
-            placeholder="이메일"
+            // placeholder="이메일"
           />
         </div>
         <div className='inputBox'>
@@ -70,7 +70,7 @@ const FindPw = () => {
               required: true,
               maxLength: 11
             })}
-            placeholder="이름"
+            // placeholder="이름"
           />
         </div>
         <div className='inputBox'>
@@ -86,7 +86,7 @@ const FindPw = () => {
               required: true,
               pattern: /^(01[016789]{1})-?[0-9]{3,4}-?[0-9]{4}$/
             })}
-            placeholder="휴대전화번호"
+            // placeholder="휴대전화번호"
           />
         </div>
         <input type="submit" value="비밀번호 찾기" />

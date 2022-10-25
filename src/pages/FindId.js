@@ -30,7 +30,7 @@ const FindId = () => {
     }
 
     return (
-        <section className='FindId'>
+        <section className='FindId inner'>
                 <h2>아이디 찾기</h2>
                 <form onSubmit={handleSubmit(onSubmit)}>
                     <div className='inputBox'>
@@ -46,7 +46,7 @@ const FindId = () => {
                                 required: true,
                                 maxLength: 11
                             })}
-                            placeholder="이름"
+                            // placeholder="이름"
                         />
                     </div>
                     <div className='inputBox'>
@@ -62,7 +62,7 @@ const FindId = () => {
                                 required: true,
                                 pattern: /^(01[016789]{1})-?[0-9]{3,4}-?[0-9]{4}$/
                             })}
-                            placeholder="휴대전화번호"
+                            // placeholder="휴대전화번호"
                         />
                     </div>
                     <input type="submit" value="아이디 찾기" />

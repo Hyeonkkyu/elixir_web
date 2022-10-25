@@ -6,13 +6,11 @@
     // outline: 1px solid tomato;
 }
 
-.FindId {
+.FindPw {
     padding: 100px 0;
 
     >h2 {
-        // font-family: Nanum Myeongjo, serif;
         font-size: 32px;
-        // font-weight: 600;
         font-weight: 500;
         text-align: center;
         margin-bottom: 50px;
@@ -27,8 +25,6 @@
             margin: 10px 0;
 
             label {
-                // color: var(--pointColor);
-                // font-size: 10px;
                 margin-right: 15px;
             }
 
@@ -61,22 +57,18 @@
 
                 #daumPostCode {
                     width: calc(100% - 120px);
-                    // margin-right: ;
                 }
 
                 .addBtn {
                     width: 100px;
                     padding: 5px 10px;
                     border: 2px solid var(--pointColor);
-                    // color: var(--pointColor);
                     border-radius: 10px;
                     font-size: 14px;
                     background-color: #fff;
                     margin: 15px auto;
                 }
             }
-
-
         }
 
         input[type=submit] {

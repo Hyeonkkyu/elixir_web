@@ -1,10 +1,11 @@
 import React, { useRef } from 'react'
 import axios from 'axios';
 import { useForm } from 'react-hook-form';
+import '../css/findpwchange.scss';
 
 //DB단에서 돌려준 id값을 hidden으로 input에 넣어주고 비밀번호를 변경해서 다시 저장해준다. 비밀번호 변경이 완료되면 로그인으로, 실패시 다시 시도하게 알람창
 
-const FindPwCheck = () => {
+const FindPwChange = () => {
 
     const { register, watch, formState: { errors }, handleSubmit } = useForm();
 
@@ -34,7 +35,7 @@ const FindPwCheck = () => {
     }
 
     return (
-        <section className='FPchangePw'>
+        <section className='FindPwChange inner'>
             <h2>비밀번호 변경</h2>
             <form onSubmit={handleSubmit(onSubmit)}>
                 <div className='inputBox'>
@@ -50,7 +51,7 @@ const FindPwCheck = () => {
                             required: true,
                             minLength: 6
                         })}
-                        placeholder="비밀번호"
+                        // placeholder="비밀번호"
                     />
                 </div>
 
@@ -68,7 +69,7 @@ const FindPwCheck = () => {
                             validate: (value) =>
                                 value === password.current
                         })}
-                        placeholder="비밀번호 확인"
+                        // placeholder="비밀번호 확인"
                     />
                 </div>
 
@@ -78,4 +79,4 @@ const FindPwCheck = () => {
     )
 }
 
-export default FindPwCheck
+export default FindPwChange

@@ -6,12 +6,17 @@
     // outline: 1px solid tomato;
 }
 
-.FindId {
+.FindPwCheck {
     padding: 100px 0;
 
     >h2 {
         font-size: 32px;
         font-weight: 500;
+        text-align: center;
+        margin-bottom: 30px;
+    }
+
+    >p {
         text-align: center;
         margin-bottom: 50px;
     }
