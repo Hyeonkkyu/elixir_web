@@ -6,9 +6,11 @@
 
 .Header {
     border-bottom: 1px solid main.$wgColor;
+
     .top {
         border-bottom: 1px solid main.$wgColor;
         font-size: 14px;
+        // font-family: 'Noto Sans KR', sans-serif;
 
         >div {
             display: flex;
@@ -34,7 +36,7 @@
                 font-size: 12px;
 
                 >p {
-                    >span{
+                    >span {
                         color: rgb(227, 75, 48);
                     }
                 }
@@ -62,12 +64,14 @@
 
         .gnb {
             display: flex;
+            font-family: 'Noto Sans KR', sans-serif;
 
             ul {
                 display: flex;
                 gap: 80px;
                 padding: 15px 0;
                 margin: 0 auto;
+                justify-content: space-between;
 
                 li {
                     font-size: 14px;

@@ -4,7 +4,7 @@ import axios from 'axios';
 import "react-datepicker/dist/react-datepicker.css";
 import DaumAddress from './DaumAddress';
 import '../css/join.scss';
-import DateSelecter from './DateSelecter';
+// import DateSelecter from './DateSelecter';
 
 const Join = () => {
 
@@ -49,7 +49,7 @@ const Join = () => {
               required: true,
               pattern: /^\S+@\S+$/i
             })}
-            placeholder="이메일"
+            // placeholder="이메일"
           />
         </div>
 
@@ -66,7 +66,7 @@ const Join = () => {
               required: true,
               maxLength: 11
             })}
-            placeholder="이름"
+            // placeholder="이름"
           />
         </div>
 
@@ -83,7 +83,7 @@ const Join = () => {
               required: true,
               maxLength: 10
             })}
-            placeholder="닉네임"
+            // placeholder="닉네임"
           />
         </div>
 
@@ -100,7 +100,7 @@ const Join = () => {
               required: true,
               minLength: 6
             })}
-            placeholder="비밀번호"
+            // placeholder="비밀번호"
           />
         </div>
 
@@ -118,7 +118,7 @@ const Join = () => {
               validate: (value) =>
                 value === password.current
             })}
-            placeholder="비밀번호 확인"
+            // placeholder="비밀번호 확인"
           />
         </div>
 
@@ -135,7 +135,7 @@ const Join = () => {
               required: true,
               pattern: /^(01[016789]{1})-?[0-9]{3,4}-?[0-9]{4}$/
             })}
-            placeholder="휴대전화번호"
+            // placeholder="휴대전화번호"
           />
         </div>
 
@@ -147,14 +147,14 @@ const Join = () => {
             <input
               name="user_birth"
               id='birthDate'
-              type='text'
-              readOnly={true}
+              type='date'
+              // readOnly={true}
               {...register("user_birth", {
                 required: true,
               })}
               placeholder="생년월일"
             />
-            <DateSelecter />
+            {/* <DateSelecter /> */}
           </div>
         </div>
 

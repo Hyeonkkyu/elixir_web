@@ -31,12 +31,13 @@ const BookList = () => {
 
     return (
         <div className='bookList'>
+            <ul className='list'>
             {data.slice(
                 items * (page - 1),
                 items * (page - 1) + items
             ).map((it, i) => {
                 return (
-                    <div key={i}>
+                    <li key={i}>
                         <Link to={'/books/bookInfo?bookInfoNum=' + it.book_code}>
                         <figure>
                             <img src={`${process.env.PUBLIC_URL}/assets/img/${it.book_img}`} />
@@ -44,10 +45,11 @@ const BookList = () => {
                         <h3>{it.book_title}</h3>
                         <p>{it.book_writer}</p>
                         </Link>
-                    </div>
+                    </li>
                 )
             })
             }
+            </ul>
             <Pagination
                 activePage={page}
                 itemsCountPerPage={items}

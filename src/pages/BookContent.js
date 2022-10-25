@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react'
-import moment from 'moment';
 import axios from 'axios'
 import { useSearchParams } from 'react-router-dom';
 
@@ -24,9 +23,7 @@ const BookContent = () => {
 
         })
             .then((response) => {
-                console.log(response.data);
                 setData(response.data);
-                console.log(data);
             })
             .catch((error) => {
                 alert('에러 발생');
@@ -34,14 +31,23 @@ const BookContent = () => {
     }, [])
 
     return (
-        <section className='BookContent'>
-            <figure>
-                <img src={`${process.env.PUBLIC_URL}/assets/img/${data.book_img}`} />
-            </figure>
-            <h3>{data.book_title}</h3>
-            <p>{data.book_writer}</p>
-            <a url={data.book_url}>구매하기</a>
-            <div className='des'>{data.book_info}</div>
+        <section className='BookContent inner'>
+            <div className='left'>
+                <figure>
+                    <img src={`${process.env.PUBLIC_URL}/assets/img/${data.book_img}`} />
+                </figure>
+                    <a href={data.book_url} target="_blank" className="buyBtn">구매하기</a>
+            </div>
+            <div className='right'>
+                <h3 className='tit'>{data.book_title}</h3>
+
+                <div>
+                    <p className='writer'>{data.book_writer} /</p>
+                    <p className='translatoriter'>{data.book_translator}</p>
+                </div>
+
+                <div className='des'>{data.book_info}</div>
+            </div>
         </section>
     )
 }

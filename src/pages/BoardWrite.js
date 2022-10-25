@@ -16,18 +16,18 @@ const BoardWrite = () => {
     const onSubmit = (data) => {
         console.log('data', data)
         axios({
-          method: 'post',
-          url: '/api/admin/insertNotice',
-          data: data
+            method: 'post',
+            url: '/api/admin/insertNotice',
+            data: data
         })
-          .then((response) => {
-            alert('게시글이 업로드 되었습니다.');
-            window.location.href = "/news";
-          })
-          .catch((error) => {
-            alert('게시글 업로드에 실패하셨습니다. 다시 시도해주세요.');
-          })
-      }
+            .then((response) => {
+                alert('게시글이 업로드 되었습니다.');
+                window.location.href = "/news";
+            })
+            .catch((error) => {
+                alert('게시글 업로드에 실패하셨습니다. 다시 시도해주세요.');
+            })
+    }
 
     if (jwt(sessionStorage.getItem("token"))['user_role'] == "ROLE_ADMIN") {
 
@@ -67,7 +67,9 @@ const BoardWrite = () => {
                             placeholder="1000자 이내로 내용을 입력해주세요."
                         />
                     </div>
-                    <input type="submit" value="작성완료" />
+                    <div className='submitBox'>
+                        <input type="submit" value="작성완료"/>
+                    </div>
                 </form>
             </section>
         )

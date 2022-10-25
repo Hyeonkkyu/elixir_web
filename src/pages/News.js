@@ -81,7 +81,9 @@ const News = () => {
           }
         </ul>
       </div>
+      <div className='btn'>
       <AdminWriteBtn />
+      </div>
       <Pagination
         activePage={page}
         itemsCountPerPage={items}
