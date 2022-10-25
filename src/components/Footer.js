@@ -47,7 +47,7 @@ const Footer = () => {
                         <li>전화 : 031-955-2637</li>
                         <li>사업자등록번호 : 208-81-24906</li>
                         <li>통신판매 : 2005-00436</li>
-                        <li>E-mail : <a href="editor@elmys.co.kr">editor@elmys.co.kr</a></li>
+                        <li>E-mail : <a href="mailto:editor@elmys.co.kr">editor@elmys.co.kr</a></li>
                     </ul>
                 </address>
             </div>

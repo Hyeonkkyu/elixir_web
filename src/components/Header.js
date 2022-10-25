@@ -45,9 +45,9 @@ const Header = () => {
             <div className="top">
                 <div className="inner">
                 <div className='sns'>
-                    <i className='xi-mail'></i>
-                    <i className='xi-facebook'></i>
-                    <i className='xi-twitter'></i>
+                    <a href="mailto:hoyha@munhak.com"><i className='xi-mail'/></a>
+                    <a href="http://www.facebook.com/elixirmystery/" target='_blank'><i className='xi-facebook'/></a>
+                    <a href="http://twitter.com/mysteryis" target='_blank'><i className='xi-twitter'/></a>
                 </div>
                 <div className="user">
                     <UserInfo />

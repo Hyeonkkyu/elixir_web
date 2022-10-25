@@ -20,12 +20,14 @@ const Login = () => {
             , { withCredentials: true }
         )
             .then((response) => {
-                // console.log(response.data.token);
                 sessionStorage.setItem("token", response.data.token);
                 axios.defaults.headers.common[
                     "Authorization"
                 ] = `Bearer ${response.data.token}`;
-                window.location.replace('/');
+                // window.location.replace('/');
+                // 로그인 하고 보던 화면으로 돌아가야하기 때문에 history.go(-1); 사용
+                // 이전페이지 가기. () 안의 값이 현재페이지에 대한 상대좌표.
+                window.history.go(-1);
             })
             .catch((error) => {
                 console.log(error);

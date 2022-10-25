@@ -28,6 +28,11 @@ const NewBook = () => {
 							<img src={`${process.env.PUBLIC_URL}/assets/img/image_1664413579745_1000.jpg`} alt="" />
 						</figure>
 					</div>
+					<div className='product'>
+						<figure>
+							<img src={`${process.env.PUBLIC_URL}/assets/img/image_1664413579745_1000.jpg`} alt="" />
+						</figure>
+					</div>
 				</div>
 				<div className='search'>
 					<SearchFrom/>

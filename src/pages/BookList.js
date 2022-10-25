@@ -36,9 +36,11 @@ const BookList = () => {
             ).map((it, i) => {
                 return (
                     <div key={i}>
+                        {/* <Link to={'/bookItem/' + it.id}> */}
                         <div>{it.book_code}</div>
                         <h3>{it.book_title}</h3>
                         <p>{it.book_writer}</p>
+                        {/* </Link> */}
                     </div>
                 )
             })

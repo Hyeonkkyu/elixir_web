@@ -12,7 +12,7 @@ const FPmain = () => {
             method: 'post',
             url: '/api/user/findPw',
             data: data
-        }
+        } 
 
             , { withCredentials: true }
         )

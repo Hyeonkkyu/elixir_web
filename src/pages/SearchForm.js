@@ -1,7 +1,7 @@
-import React, { useState } from 'react';
-import { useNavigate, useSearchParams } from 'react-router-dom';
+import React from 'react';
+import { useNavigate } from 'react-router-dom';
 
-const SearchForm = ({ searchInput, setSearchInput, search, setSearch }) => {
+const SearchForm = ({ searchInput, setSearchInput, setSearch }) => {
     const navigate = useNavigate();
 
     const handlerSearch = (e) => {
@@ -14,7 +14,7 @@ const SearchForm = ({ searchInput, setSearchInput, search, setSearch }) => {
 
     return (
         <div>
-            <input type='text'value="도서 정보를 입력해주세요." onChange={handlerInput}/>
+            <input type='text' onChange={handlerInput} placeholder='도서명 또는 작가명을 입력해주세요.' />
             <button onClick={handlerSearch}><i className='xi-search'></i></button>
         </div>
     )
