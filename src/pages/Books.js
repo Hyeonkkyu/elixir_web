@@ -28,16 +28,8 @@ const Books = () => {
               <option value="전체" selected="selected">전체</option>
               <option value="국내서">국내서</option>
               <option value="해외서">해외서</option>
-              <option value="SF">SF</option>
-              <option value="공포">공포</option>
-              <option value="로맨스">로맨스</option>
-              <option value="미스터리">미스터리</option>
-              <option value="스릴러">스릴러</option>
-              <option value="액션">액션</option>
-              <option value="어드벤처">어드벤처</option>
-              <option value="추리">추리</option>
-              <option value="코미디">코미디</option>
-              <option value="판타지">판타지</option>
+              <option value="오름차순">오름차순</option>
+              <option value="내림차순">내림차순</option>
             </select>
           </div>
           <BookList />

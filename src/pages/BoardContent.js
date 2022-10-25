@@ -9,41 +9,33 @@ const BoardContent = () => {
 
     const query = searchParams.get('noticeNum');
 
-    console.log(query);
+    // console.log(query);
 
-    const data = {
-        'notice_num': query
-    };
-
-    const jsonData = JSON.stringify(data);
-
-    console.log(data);
-
-    console.log(jsonData);
+    const { data, setData } = useState();
 
     useEffect(() => {
         axios({
-            headers: {
-                'Content-Type': 'application/json'
-            },
             method: 'get',
             url: '/api/admin/selectNotice',
-            data: data
-
+            params: {
+                notice_num: query
+            }
         })
             .then((response) => {
                 console.log(response.data);
+                setData(response.data);
             })
             .catch((error) => {
-                alert('에러 발생');
+                alert('에러 발생??');
             });
     }, [])
 
+
     return (
         <section className='BoardContent'>
-            {/* <h2 className='tit'>{it.notice_title}</h2>
-            <div className='writeData'>{it.user_name} / {moment(it.notice_date).format('YYYY-MM-DD')}</div>
-            <div className='des'>{it.notice_content}</div> */}
+            {/* <h2 className='tit'>{data.notice_title}</h2>
+            <div className='writeData'>{data.user_name} / {moment(data.notice_date).format('YYYY-MM-DD')}</div>
+            <div className='des'>{data.notice_content}</div> */}
             ho!
         </section>
     )
