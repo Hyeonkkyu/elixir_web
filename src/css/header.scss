@@ -5,31 +5,43 @@
 }
 
 .Header {
+    border-bottom: 1px solid main.$wgColor;
     .top {
         border-bottom: 1px solid main.$wgColor;
         font-size: 14px;
 
         >div {
-
             display: flex;
             justify-content: space-between;
-            padding: 10px 0;
-
+            padding: 8px 0;
 
             .sns {
                 display: flex;
-                gap: 15px;
-                font-size: 17px;
+                gap: 10px;
+                font-size: 15px;
+
+                a:hover {
+                    i {
+                        color: main.$subColor;
+                    }
+                }
             }
 
             .user {
                 display: flex;
                 justify-content: right;
                 gap: 15px;
+                font-size: 12px;
 
-                >p {}
+                >p {
+                    >span{
+                        color: rgb(227, 75, 48);
+                    }
+                }
 
                 >button {
+                    background-color: main.$mainColor;
+                    color: #fff;
                     border: none;
                     border-radius: 3px;
                 }

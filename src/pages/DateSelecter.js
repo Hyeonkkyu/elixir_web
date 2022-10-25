@@ -1,12 +1,12 @@
-import React, { useState, useRef } from 'react'
-import DatePicker, { registerLocale } from "react-datepicker";
+import React, { useState } from 'react'
+import DatePicker from "react-datepicker";
 import moment from 'moment';
-// import '../css/dateselecter.css'
-// registerLocale("ko", ko);
+import '../css/dateselecter.css'
 import "react-datepicker/dist/react-datepicker.css";
 
 const DateSelecter = () => {
 
+    // 저 null이 문제인가
     const [startDate, setStartDate] = useState(null);
     const [isOpen, setIsOpen] = useState(false);
 
@@ -15,14 +15,12 @@ const DateSelecter = () => {
     const handleChange = (e) => {
         setIsOpen(!isOpen);
         setStartDate(e);
-
+        console.log(formatDate);
         document.getElementById("birthDate").value = formatDate;
     };
     const handleClick = (e) => {
         e.preventDefault();
         setIsOpen(!isOpen);
-
-
     };
 
 
@@ -34,9 +32,7 @@ const DateSelecter = () => {
             </button>
             {isOpen && (
                 <DatePicker
-                    locale="ko"
                     selected={startDate}
-                    // onChange={(date) => setStartDate(date)}
                     onChange={handleChange}
                     showMonthDropdown
                     showYearDropdown
@@ -44,7 +40,6 @@ const DateSelecter = () => {
                     maxDate={new Date()}
                     showDisabledMonthNavigation
                     inline />
-                // console.log(DatePicker),
             )}
         </>
     );

@@ -2,7 +2,9 @@ import React from 'react'
 
 const Mysteria = () => {
   return (
-    <div>Mysteria</div>
+    <section className='Mysteria'>
+      Mysteria
+    </section>
   )
 }
 

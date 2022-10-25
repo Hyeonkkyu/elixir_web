@@ -42,7 +42,7 @@ const Books = () => {
           </div>
           <BookList />
         </div>
-      </section>
+      </section> 
     )
   }
 

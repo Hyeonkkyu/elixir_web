@@ -9,7 +9,6 @@ const Login = () => {
     const { register, handleSubmit } = useForm();
 
     const onSubmit = async (data) => {
-        console.log('data', data)
         axios({
             method: 'post',
             url: '/api/user/signin',
@@ -20,12 +19,14 @@ const Login = () => {
             , { withCredentials: true }
         )
             .then((response) => {
-                // console.log(response.data.token);
                 sessionStorage.setItem("token", response.data.token);
                 axios.defaults.headers.common[
                     "Authorization"
                 ] = `Bearer ${response.data.token}`;
                 window.location.replace('/');
+                // 로그인 하고 보던 화면으로 돌아가야하기 때문에 history.go(-1); 사용
+                // 이전페이지 가기. () 안의 값이 현재페이지에 대한 상대좌표.
+                // window.history.go(-1);
             })
             .catch((error) => {
                 console.log(error);
@@ -37,7 +38,7 @@ const Login = () => {
         <section className='Login inner'>
             <h2>LOGIN</h2>
             {/* <h2>로그인</h2> */}
-            <form onSubmit={handleSubmit(onSubmit)} >
+            <form onSubmit={handleSubmit(onSubmit)} method="get" >
                 <div className='inputBox'>
                     <input id="user_id" type="email" name="user_id" {...register("user_id")} placeholder="이메일" />
                     <label htmlFor="user_id">이메일</label>

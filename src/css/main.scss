@@ -1,15 +1,11 @@
 $mainColor : #FAAB23;
 $subColor : #c58b40;
 $wgColor : #e7e7e7;
+$dgColor : #c9c9c9;
 
 * {
     // outline: 1px solid tomato;
 }
-
-// body {
-//     background-color: #333;
-//     color: #fff;
-// }
 
 .sectionPadding {
     padding: 100px 0;
@@ -69,7 +65,7 @@ $wgColor : #e7e7e7;
 
         .newBookSlider {
             display: flex;
-            gap: 50px;
+            gap: 80px;
             margin-bottom: 50px;
 
             .product {
@@ -97,7 +93,6 @@ $wgColor : #e7e7e7;
                 border: none;
                 border-bottom: 1px solid $mainColor;
                 width: 35%;
-                color: $wgColor;
             }
 
             button {
@@ -223,8 +218,6 @@ $wgColor : #e7e7e7;
         .right {
             flex: 2;
         }
-
-
     }
 
 
@@ -243,7 +236,76 @@ $wgColor : #e7e7e7;
 
 .Myteria {}
 
-.News {}
+.News {
+    padding: 50px 0;
+
+    h2 {
+        font-size: 33px;
+        font-family: Nanum Myeongjo, serif;
+        text-align: center;
+        margin-bottom: 50px;
+    }
+
+    .board {
+        font-size: 14px;
+        line-height: 45px;
+
+        .boardHeader {
+            display: flex;
+            text-align: center;
+
+            // border-bottom: 1px solid $dgColor;
+            border-bottom: 1px solid $wgColor;
+            // border-bottom: 1px solid $mainColor;
+
+            .boardNo {
+                flex: 1;
+            }
+
+            .boardTitle {
+                flex: 4;
+            }
+
+            .boardWriter {
+                flex: 1;
+            }
+
+            .boardCreateDate {
+                flex: 1;
+            }
+        }
+
+        .boardBody {
+            border-bottom: 1px solid $wgColor;
+            >li {
+                display: flex;
+                text-align: center;
+
+                &:nth-child(even) {
+                    background-color: #f9f9f9;
+
+                }
+
+                .no {
+                    flex: 1;
+                }
+
+                .tit {
+                    flex: 4;
+                    text-align: left;
+                }
+
+                .wri {
+                    flex: 1;
+                }
+
+                .date {
+                    flex: 1;
+                }
+            }
+        }
+    }
+}
 
 .Contact {
     display: flex;
