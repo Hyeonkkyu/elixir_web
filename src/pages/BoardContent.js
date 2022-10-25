@@ -11,12 +11,25 @@ const BoardContent = () => {
 
     console.log(query);
 
+    const data = {
+        'notice_num': query
+    };
+
+    const jsonData = JSON.stringify(data);
+
+    console.log(data);
+
+    console.log(jsonData);
+
     useEffect(() => {
         axios({
+            headers: {
+                'Content-Type': 'application/json'
+            },
             method: 'get',
             url: '/api/admin/selectNotice',
-            // JSON형식 key:value로 데이터 전송
-            data: { notice_num: query }
+            data: data
+
         })
             .then((response) => {
                 console.log(response.data);
