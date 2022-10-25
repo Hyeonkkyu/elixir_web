@@ -16,6 +16,7 @@
     "react-daum-postcode": "^3.1.1",
     "react-dom": "^18.2.0",
     "react-hook-form": "^7.37.0",
+    "react-image-upload": "^2.0.1",
     "react-js-pagination": "^3.0.3",
     "react-redux": "^8.0.4",
     "react-router-dom": "^6.4.1",
