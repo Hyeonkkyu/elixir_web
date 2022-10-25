@@ -19,7 +19,7 @@ const BookContent = () => {
             method: 'get',
             url: '/api/product/selectBook',
             params: {
-                notice_num: query
+                book_code: query
             }
 
         })
