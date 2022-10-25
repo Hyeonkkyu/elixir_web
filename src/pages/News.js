@@ -4,16 +4,23 @@ import jwt from 'jwt-decode';
 const News = () => {
 
   function AdminWriteBtn() {
-    const checkUserRoll = sessionStorage.getItem("Token");
+    const checkUserRoll = sessionStorage.getItem("token");
     if (checkUserRoll == null) {
       return (
         <>
         </>
       )
-    } else if (jwt(checkUserRoll)['user_role'] == "ROLE_ADMIN"){
-      <>
-      <button>글쓰기</button>
-      </>
+    } else if (jwt(checkUserRoll)['user_role'] == "ROLE_ADMIN") {
+      return (
+        <>
+          <button>글쓰기</button>
+        </>
+      )
+    } else {
+      return (
+        <>
+        </>
+      )
     }
   }
 
