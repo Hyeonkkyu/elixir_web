@@ -9,7 +9,7 @@ const DaumAddress = () => {
         let fullAddress = data.address;
         let extraAddress = '';
         let zonecode = data.zonecode;
-
+ 
         if (data.addressType === 'R') {
             if (data.bname !== '') {
                 extraAddress += data.bname;

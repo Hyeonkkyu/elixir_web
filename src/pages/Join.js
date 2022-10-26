@@ -49,7 +49,7 @@ const Join = () => {
               required: true,
               pattern: /^\S+@\S+$/i
             })}
-            // placeholder="이메일"
+          // placeholder="이메일"
           />
         </div>
 
@@ -66,7 +66,7 @@ const Join = () => {
               required: true,
               maxLength: 11
             })}
-            // placeholder="이름"
+          // placeholder="이름"
           />
         </div>
 
@@ -83,7 +83,7 @@ const Join = () => {
               required: true,
               maxLength: 10
             })}
-            // placeholder="닉네임"
+          // placeholder="닉네임"
           />
         </div>
 
@@ -93,14 +93,17 @@ const Join = () => {
             && <p className='message'>필수입력란입니다.</p>}
           {errors.user_pw && errors.user_pw.type === "minLength"
             && <p className='message'>비밀번호는 6자 이상 입력해주세요.</p>}
+          {errors.user_pw && errors.user_pw.type === "pattern"
+            && <p className='message'>소문자, 숫자, 특수문자를 포함하여 입력해주세요.</p>}
           <input
             name="user_pw"
             type='password'
             {...register("user_pw", {
               required: true,
-              minLength: 6
+              minLength: 6,
+              pattern: /^(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$%^&*-]).{8,}$/
             })}
-            // placeholder="비밀번호"
+          placeholder="소문자, 숫자, 특수문자 포함하여 6자 이상"
           />
         </div>
 
@@ -118,7 +121,7 @@ const Join = () => {
               validate: (value) =>
                 value === password.current
             })}
-            // placeholder="비밀번호 확인"
+          // placeholder="비밀번호 확인"
           />
         </div>
 
@@ -135,7 +138,7 @@ const Join = () => {
               required: true,
               pattern: /^(01[016789]{1})-?[0-9]{3,4}-?[0-9]{4}$/
             })}
-            // placeholder="휴대전화번호"
+          // placeholder="휴대전화번호"
           />
         </div>
 
@@ -158,7 +161,6 @@ const Join = () => {
           </div>
         </div>
 
-        {/* 카카오 주소 받기 완성해두기 */}
         <div className='inputBox'>
           <label>주소</label>
           <div className='postCodeBox'>
@@ -175,8 +177,8 @@ const Join = () => {
             <DaumAddress className="addBtn" />
           </div>
 
-          {errors.user_add && errors.user_add.type === "required"
-            && <p className='message'>필수입력란입니다.</p>}
+          {/* {errors.user_add && errors.user_add.type === "required"
+            && <p className='message'>필수입력란입니다.</p>} */}
           <input
             name="user_add"
             id='daumAdd'
@@ -187,6 +189,7 @@ const Join = () => {
             })}
             placeholder="주소"
           />
+
           {errors.user_add_detail && errors.user_add_detail.type === "maxLength"
             && <p className='message'>최대 입력수를 초과하였습니다.</p>}
           <input

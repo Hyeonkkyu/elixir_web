@@ -18,7 +18,7 @@ const Header = () => {
                 </Link>
             )
         } else if (jwt(isLogin)['user_role'] == "ROLE_USER") {
-            console.log(jwt(isLogin));
+            // console.log(jwt(isLogin));
             return (
                 <>
                     <p>{jwt(isLogin)['nickname']} 님 반갑습니다!</p>
