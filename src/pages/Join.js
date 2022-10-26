@@ -103,7 +103,7 @@ const Join = () => {
               minLength: 6,
               pattern: /^(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$%^&*-]).{8,}$/
             })}
-          placeholder="소문자, 숫자, 특수문자 포함하여 6자 이상"
+            placeholder="소문자, 숫자, 특수문자 포함하여 6자 이상"
           />
         </div>
 
@@ -202,7 +202,7 @@ const Join = () => {
             placeholder="상세주소"
           />
         </div>
-        <input type="submit" value="회원가입" />
+        <input type="submit" value="회원가입"/>
       </form>
     </section>
   );
