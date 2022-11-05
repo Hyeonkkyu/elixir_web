@@ -19,6 +19,7 @@ import FindPwChange from './pages/FindPwChange';
 import BoardWrite from './pages/BoardWrite';
 import BoardContent from './pages/BoardContent';
 import BookContent from './pages/BookContent';
+import AdminPage from './pages/AdminPage';
 
 import './css/main.scss';
 
@@ -43,6 +44,7 @@ const App = () => {
         <Route path='/findpw' element={<FindPw />} />
         <Route path='/findpw/check' element={<FindPwCheck />} />
         <Route path='/findpw/changepw' element={<FindPwChange />} />
+        <Route path='/adminpage' element={<AdminPage />} />
       </Routes>
       <Footer />
     </>

@@ -33,7 +33,6 @@ const Join = () => {
   return (
     <section className='Join inner'>
       <h2>JOIN</h2>
-      {/* <h2>회원가입</h2> */}
       <form onSubmit={handleSubmit(onSubmit)} >
         <div className='inputBox'>
           <label>이메일</label>

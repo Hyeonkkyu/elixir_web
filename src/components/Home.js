@@ -7,7 +7,6 @@ const Home = () => {
   return (
     <main>
       <MainVisual />
-      {/* <Video /> */}
       <NewBook />
       <Video />
     </main>

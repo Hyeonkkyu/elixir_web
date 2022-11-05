@@ -37,7 +37,6 @@ const Login = () => {
     return (
         <section className='Login inner'>
             <h2>LOGIN</h2>
-            {/* <h2>로그인</h2> */}
             <form onSubmit={handleSubmit(onSubmit)} method="get" >
                 <div className='inputBox'>
                     <input id="user_id" type="email" name="user_id" {...register("user_id")} placeholder="이메일" />
