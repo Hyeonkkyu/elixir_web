@@ -1,12 +1,15 @@
 import React from 'react';
 import { Route, Routes } from 'react-router-dom';
+
 import Header from './components/Header';
 import Home from './components/Home';
-import About from './pages/About';
-import Books from './pages/Books';
-import Mysteria from './pages/Mysteria';
-import News from './pages/News';
-import Contact from './pages/Contact';
+import About from './components/About';
+import Books from './components/Books';
+import Mysteria from './components/Mysteria';
+import News from './components/News';
+import Contact from './components/Contact';
+import Footer from './components/Footer';
+
 import Login from './pages/Login';
 import Join from './pages/Join';
 import FindId from './pages/FindId';
@@ -15,10 +18,9 @@ import FindPwCheck from './pages/FindPwCheck';
 import FindPwChange from './pages/FindPwChange';
 import BoardWrite from './pages/BoardWrite';
 import BoardContent from './pages/BoardContent';
-import Test from './pages/Test';
-import Footer from './components/Footer';
-import './css/main.scss';
 import BookContent from './pages/BookContent';
+
+import './css/main.scss';
 
 
 const App = () => {
@@ -41,7 +43,6 @@ const App = () => {
         <Route path='/findpw' element={<FindPw />} />
         <Route path='/findpw/check' element={<FindPwCheck />} />
         <Route path='/findpw/changepw' element={<FindPwChange />} />
-        <Route path='/test' element={<Test />} />
       </Routes>
       <Footer />
     </>
